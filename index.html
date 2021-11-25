@@ -7,7 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
         <link rel="stylesheet prefetch" href="Style.css">
+        <link rel="stylesheet" href="Assets/simple-notify.min.css" />
     </head>
+    <script type="text/javascript" src="Assets/index.js"></script>
+    <script src="Assets/simple-notify.min.js"></script>
+    <script src="Assets/jquery-3.6.0.js"></script>
 <script>
     function showdate() {
   var dt = new Date();
@@ -24,7 +28,8 @@ document.getElementById("clock").innerHTML = (Hour+":"+Minute);
   
   setInterval(showdate,0);
 </script>
-<body>
+<div class="PC" id="pc" style="display: none;"></div>
+<body onload="ConsoleCheck()">
 <div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPD></pre>
 <div id=CacheProgress><div id=CacheBar></div></div></div>
 <span id="date" style="float:right; margin-right:.50%; margin-top: 0px; font-size:13px; color: rgb(153, 152, 152);" >

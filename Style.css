@@ -1,0 +1,159 @@
+body{
+    font-family: UD Digi Kyokasho NK-B!important;
+    background-image: url("Assets/aa.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#clock{
+    float:right;
+    margin-right:2.25%;
+    margin-top: 18px;
+    font-weight:bold;
+    font-size:28px;
+     color: white;
+   }
+   #date {
+    float:left;
+    margin-left:1.25%;
+    font-weight:bold;
+    margin-top: 18px;
+    font-size:28px;
+    color: white;
+   }
+.a {
+    cursor: pointer;
+  }
+  /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: rgb(28, 167, 172);
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #0a0a0a;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(36, 36, 36);
+    color: rgb(146, 146, 146);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #045aaa;
+    color: white;
+  }
+
+button {
+           border: 2px solid black;
+           border-radius: 5px;
+           width: 395px;
+           height: 40px;           
+           text-align: center;
+           padding: 1px;
+           margin: 1px;
+           color: white;
+           background:rgba(0,0,0,0.5);
+}
+.CGIT:hover{
+  box-shadow: 0 1px 10px 0 white;
+  color: white;
+  border-radius: 5px;
+  background-color: #3b5998;
+}
+.CIG:hover{
+  box-shadow: 0 1px 10px 0 white;
+  color: white;
+  border-radius: 5px;
+  background-color: #3b5998;
+}
+.CTW:hover{
+  box-shadow: 0 1px 10px 0 white;
+  color: white;
+  border-radius: 5px;
+  background-color: #3b5998;
+}
+.CFB:hover{
+  box-shadow: 0 1px 10px 0 white;
+  color: white;
+  border-radius: 5px;
+  background-color: #3b5998;
+}
+.CYT:hover{
+  box-shadow: 0 1px 10px 0 white;
+  color: white;
+  border-radius: 5px;
+  background-color: #3b5998;
+}
+.CDEV:hover{
+  box-shadow: 0 1px 10px 0 white;
+  color: white;
+  border-radius: 5px;
+  background-color: #3b5998;
+}
+.dum{
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, .5);
+  color: antiquewhite; 
+  text-align: left; 
+  font-size: 18px;
+}
+.dumb{
+    text-align: left;
+    background-color: #292929;
+    border: 2px solid rgb(158, 158, 158);
+    width: 400px;
+    padding: 10px;
+    margin: 1px;
+    border-radius: 5px;
+
+}
+.link{
+  margin-top: 10px;
+  text-decoration: none;
+}
+.curcle{
+  width: 50px;
+  height: 20px;
+  border: 1px solid rgb(158, 158, 158);
+  padding: 1px;
+  margin: 10px;
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 0%;
+  margin-left: 79%;
+  color: aliceblue;
+}
+#Ham{
+  color: aliceblue;
+}
+.Hamburg{
+  color: aliceblue;
+}
+.return{
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 50px;
+  height: 40px;           
+  text-align: center;
+  padding: 1px;
+  margin: 1px;
+  color: white;
+  background:rgba(0,0,0,0.5);
+}
+.return:hover{
+  box-shadow: 0 1px 10px 0 white;
+  color: white;
+  border-radius: 5px;
+  background-color: #3b5998;
+}

@@ -29,11 +29,6 @@ Bin/pl_historyBlocker.bin
 Bin/pl_kernelDumper.bin
 Bin/pl_updatesDisable.bin
 Bin/rifrenamer.bin
-Exploit/goldhen20b672.bin
-Exploit/goldhen672.bin
-Exploit/goldhen672v1.bin
-Exploit/hen213.bin
-Exploit/hen213b.bin
 scripts/exp_loader.js
 scripts/jb.js
 scripts/m_loader.js

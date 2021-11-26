@@ -29,12 +29,6 @@ Bin/pl_historyBlocker.bin
 Bin/pl_kernelDumper.bin
 Bin/pl_updatesDisable.bin
 Bin/rifrenamer.bin
-scripts/exp_loader.js
-scripts/jb.js
-scripts/m_loader.js
-scripts/mira.elf
-scripts/pl_loader.js
-scripts/pls_loader.js
 
 NETWORK:
 *

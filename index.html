@@ -1,11 +1,17 @@
-<html manifest="offlinexmb.cache">
-  <head>
-    <meta charset="utf-8">
-    <title>FW: 6.72 / Home | Harleythetech multiFW Host</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
-    <link rel="stylesheet prefetch" href="Style.css">
-</head>
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Firwmare Select | Harleythetech MultiFW Host</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
+        <link rel="stylesheet prefetch" href="Style.css">
+        <link rel="stylesheet" href="Assets/simple-notify.min.css" />
+    </head>
+    <script type="text/javascript" src="Assets/index.js"></script>
+    <script src="Assets/simple-notify.min.js"></script>
+    <script src="Assets/jquery-3.6.0.js"></script>
 <script>
     function showdate() {
   var dt = new Date();
@@ -22,44 +28,47 @@ document.getElementById("clock").innerHTML = (Hour+":"+Minute);
   
   setInterval(showdate,0);
 </script>
-</head>
-<body style='background-image: url("Assets/aa.png");'>
+<div class="PC" id="pc" style="display: none;"></div>
+<body onload="ConsoleCheck()">
 <div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPD></pre>
 <div id=CacheProgress><div id=CacheBar></div></div></div>
-<br>
-    <span id="date" style="float:right; margin-right:.50%; margin-top: 0px; font-size:13px; color: rgb(153, 152, 152);" >
+<span id="date" style="float:right; margin-right:.50%; margin-top: 0px; font-size:13px; color: rgb(153, 152, 152);" >
     </span>
     <span id="clock" style="float:right; margin-right:.0%; margin-top: 0px; font-size:13px; color: rgb(153, 152, 152);">
         <br>
-</span><br>
-<div class="topnav">
-    <a class="active" href="index.html">Home</a>
-    <a class="idx" href="Jailbreak.html">Hen/Mira</a>
-    <a class="idx" href="Tools.html">Tools</a>
-    <a class="idx" href="Linux.html">Linux Loader </a>
-    <a class="idx" href="Game-Tools.html">Game Tool</a>
-  </div> 
-<h1 id=msgs2 style='font-size:25px;text-align:center;color:white;'>Welcome to PS4 Firmware Exploit</h1>
-<h2 id=mesg3 style='font-size: 20px; text-align: left; color: antiquewhite;'>Host Update</h2>
-<ul class="HUFE">
-  <li>Host Update: Removed WKE Test</li>
-  <li>Host Added: Host Updates</li>
-  <li>Host Fix: Cache Files incomplete</li>
-  <li>Host Added: Sleirsgoevy's 9.00 Webkit Exploit</li>
-  <li>Host Compiled: Combined Zelix and Nazky's Code for 8.xx test</li>
-  <li>Host Added: Peter's 8.xx Webkit Test (modified)</li>
-  <li>Host Added: Zelix 8.xx Webkit Test</li>
-  <LI>Host Added: Nazky 8.xx Webkit Test</LI>
-  <li>Host Fix: Automatic Caching not working</li>
-  <li>Host Added: Game Tool</li>
-  <li>Host Added: Tabs ( Home, Hen/Mira, Tools, LL, GT, 8.xx/9.00 Test)</li>
-  <li>Host Source: Karo218.ir ( ReDesigned UI )</li>
-  <li>Host Creation: October 14, 2021</li>
-  </ul>
-<br>
-<br>
-<footer style="position: fixed; bottom: 12px; left: 5px; width: 5px; padding: 3px; background-color: DarkSalmon; color: white;">
-<p style='position: fixed; bottom: 0px; left: 20px;'><a style='font-size:13px;text-align:center;color:#0083cf;'>Designer: <a class="hue" style='font-size:13px;text-align:center;color:white;text-shadow: 4px 4px 4px black;'>Harley Jovellano & Karo Sharifi<a style='font-size:13px;text-align:center;color:#0083cf;'> Super Special Thanks To :<a style='font-size:13px;text-align:center;color:white;'>Sleirsgoevy ,Leeful , AlAzif , SiSTRo. </a><br></p><br>
-</footer>
-</body>
-</html>
+</span>
+ <hr>
+  <p id="demo"></p>
+  <h1 id=msgs2 style='font-size:25px;text-align:left;color:white;'>Select Firmware | Harleythetech MultiFW Host</h1>
+  <p id="Ham">FW Available: 6.72</p>
+  <p id="Ham">FW in Works/Not Available: 5.05, 7.02, 7.5X </p>
+  <table style="width: 50%; margin-left: auto; margin-right: auto;">
+    <tr style="list-style: none;">
+    <th> <div class="dumb"onmouseover="msgs2.innerHTML='FW: 5.05 '" ;="" onmouseout="msgs2.innerHTML='Select Firmware | Harleythetech MultiFW Host'">
+    <img src="Assets/images2.png" style="width: 20%; height: 20%;margin-left: 40%;margin-right: auto;"><br><p id="Ham">Exploit + Tools: 5.05</p> <button  class="CFB" style="font-size:20px;text-align:center;;text-shadow: 4px 4px 4px black;color:white" onclick="window.location.href = '5.05/index.html'; return false">FW: 5.05</button>
+    </div></th>
+    <td> <div class="dumb" onmouseover="msgs2.innerHTML='FW: 6.72'" ;="" onmouseout="msgs2.innerHTML='Select Firmware | Harleythetech MultiFW Host'">
+      <img src="Assets/images2.png" style="width: 20%; height: 20%;margin-left: 40%;margin-right: auto;"><br><p id="Ham">Exploit + Tools: 6.72</p><button  class="CIG" style="font-size:20px;text-align:center;;text-shadow: 4px 4px 4px black;color:white" onclick="window.location.href = '6.72/index.html'; return false">FW: 6.72</button>
+    </div></td>
+    <td> <div class="dumb" onmouseover="msgs2.innerHTML='FW: 7.02'" ;="" onmouseout="msgs2.innerHTML='Select Firmware | Harleythetech MultiFW Host'">
+      <img src="Assets/images2.png" style="width: 20%; height: 20%;margin-left: 40%;margin-right: auto;"><br><p id="Ham">Exploit + Tools: 7.02</p><button  class="CTW" style="font-size:20px;text-align:center;;text-shadow: 4px 4px 4px black;color:white" onclick="window.location.href = '7.02/index.html'; return false">FW: 7.02</button>
+    </div></td>
+    </tr>
+    <tr>
+    <td> <div class="dumb" onmouseover="msgs2.innerHTML='FW: 7.5X'" ;="" onmouseout="msgs2.innerHTML='Select Firmware | Harleythetech MultiFW Host'">
+      <img src="Assets/images2.png" style="width: 20%; height: 20%;margin-left: 40%;margin-right: auto;"><br><p id="Ham">Exploit + Tools: 7.5X</p><button  class="CGIT" style="font-size:20px;text-align:center;;text-shadow: 4px 4px 4px black;color:white" onclick="window.location.href = '7.55/Cache.html'; return false">FW: 7.5X</button>
+    </div></td>
+    <td> <div class="dumb" onmouseover="msgs2.innerHTML='WKE Test | Do not Open this unless you want to test webkit vulnerability'" ;="" onmouseout="msgs2.innerHTML='Select Firmware | Harleythetech MultiFW Host'">
+      <img src="Assets/browser.png" style="width: 20%; height: 20%;margin-left: 40%;margin-right: auto;"><br><p id="Ham">Webkit Exploit Test (Ignore)</p><button  class="CYT" style="font-size:20px;text-align:center;;text-shadow: 4px 4px 4px black;color:white" onclick="window.location.href = 'WKET/index.html'; return false">Webkit Exploit Test 8.00+</button>
+    </div></td>
+    <td> <div class="dumb" onmouseover="msgs2.innerHTML='Developers Info '" ;="" onmouseout="msgs2.innerHTML='Select Firmware | Harleythetech MultiFW Host'">
+      <img src="Assets/comm.png" style="width: 20%; height: 20%;margin-left: 40%;margin-right: auto;"><br><p id="Ham">Dev's Info</p><button  class="CDEV" style="font-size:20px;text-align:center;;text-shadow: 4px 4px 4px black;color:white" onclick="window.location.href = 'Socials.html'; return false">About</button>
+    </div></td>
+  </tr>
+  </table>
+  <br><br><br>
+  <footer style="position: fixed; bottom: 12px; left: 5px; width: 5px; padding: 3px; background-color: DarkSalmon; color: white;">
+    <p style='position: fixed; bottom: 0px; left: 20px;'><a style='font-size:13px;text-align:center;color:#0083cf;'>Designer: <a class="hue" style='font-size:13px;text-align:center;color:white;text-shadow: 4px 4px 4px black;'>Harley Jovellano - @harleythetech<a style='font-size:13px;text-align:center;color:#0083cf;'></a><br></p><br>
+    </footer>
+  </body>
+  </html>

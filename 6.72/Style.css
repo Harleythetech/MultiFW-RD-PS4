@@ -437,14 +437,15 @@ text-shadow: 4px 4px 4px black;
 }
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: rgb(89, 157, 212);
+  background-color: rgb(27, 57, 82);
+  color: white;
   overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #0a0a0a;
+  color: #ffffff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;

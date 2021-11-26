@@ -1,44 +1,13 @@
 var i = 0;
 
 var fwUA = navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 (') + 19, navigator.userAgent.indexOf(') Apple'));
-
-function Menu() {
-    var x = document.getElementById("Menu");
-    if (x.className === "topmenu") {
-      x.className += " responsive";
-    } else {
-      x.className = "topmenu";
-    }
-}
-
 function ConsoleCheck() {
-  var images;
-  let currentDate = new Date();
-  let cMonth = currentDate.getMonth() +1;
-
-  if(cMonth == "12") {
-    images = [
-      'Christmas/BG.jpg',
-    ]
-  }else if (cMonth == "10"){
-    images = [
-      'Halloween/BG.jpg',
-    ]
-  }else{
-    images = [
-      'Assets/aa.png'
-    ]
-  }
-   
-  var length = images.length;
-  var rand = Math.floor(length*Math.random());
-
   let PS4C = navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 ('), navigator.userAgent.indexOf(') Apple'));
   //alert(PS4C);
   if (PS4C.includes("5.0 (Play") ) {
   //alert("ps4 detect");
   document.getElementById("pc").style.display = "none";
-  document.getElementById("ps4").style.display = "block";
+  document.getElementById("ps4").style.display = "none";
   document.getElementById("ButtonCredit").style.display = "none";
   document.getElementById("ButtonJailbreak").style.display = "none";
 
@@ -80,6 +49,8 @@ function ConsoleCheck() {
     document.getElementById("pc").style.display = "block";
     if (PS4C.includes("Windows")) {
       OSDetect(`OS : Windows`, "success");
+    } else if (PS4C.includes("(PS4;")) {
+      OSDetect(`OS : PS4`, "success");
     } else if (PS4C.includes("(iPhone;")) {
       OSDetect(`OS : iPhone`, "success");
     } else if (PS4C.includes("Android")) {
@@ -116,70 +87,6 @@ function removeOptions(selectElement) {
      selectElement.remove(i);
   }
 }
-
-//------BIG THANKS TO SISTRO FOR THIS !!!!!--------
-
-
-var getPayload = function(payload, onLoadEndCallback) {
-  var req = new XMLHttpRequest();
-  req.open('GET', payload);
-  req.send();
-  req.responseType = "arraybuffer";
-  req.onload = function (event) {
-      if (onLoadEndCallback) onLoadEndCallback(req, event);
-  };
-}
-
-var sendPayload = function(url, data, onLoadEndCallback) {
-  var req = new XMLHttpRequest();
-  req.open("POST", url, true);
-  req.send(data);
-
-  req.onload = function (event) {
-      if (onLoadEndCallback) onLoadEndCallback(req, event);
-  };
-}
-
-function LoadpaylodsGhen20(PLfile){ //Loading Payload via Payload Param.
-  var PS4IP = document.getElementById("psip").value;
-	  
-		// First do an initial check to see if the BinLoader server is running, ready or busy.
-		var req = new XMLHttpRequest();
-    req.open("POST", `http://${PS4IP}:9090/status`);
-		req.send();
-		req.onerror = function(){
-			//alert("Cannot Load Payload Because The BinLoader Server Is Not Running");//<<If server is not running, alert message.
-      ServerStatus("Cannot Load Payload Because The BinLoader Server Is Not Running");
-			return;
-		};
-		req.onload = function(){
-			var responseJson = JSON.parse(req.responseText);
-			if (responseJson.status=="ready"){
-		  getPayload(PLfile, function (req) {
-				if ((req.status === 200 || req.status === 304) && req.response) {
-				   //Sending bins via IP POST Method
-           sendPayload(`http://${PS4IP}:9090`, req.response, function (req) {
-            if (req.status === 200) {
-              alert("Payload sended !");
-					   }else{
-               ErrorNotif();
-               return;
-              }
-					})
-				}
-			});
-      PleaseWait();
-			}
-			else {
-				//alert("Cannot Load Payload Because The BinLoader Server Is Busy");//<<If server is busy, alert message.
-        ErrorNotif3();
-				return;
-			}
-		};
-	}
-
-//--------------------------------------------------
-
 function fade(element) {
   var op = 1;  // initial opacity
   var timer = setInterval(function () {
@@ -192,7 +99,6 @@ function fade(element) {
       op -= op * 1;
   }, 0);
 }
-
 function unfade(element) {
   var op = 0.1;  // initial opacity
   document.getElementById(element).style.display = 'block';

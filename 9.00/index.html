@@ -6,12 +6,12 @@
     <link rel="stylesheet prefetch" href="style.css">
     <script>
         function allset() {
-            document.getElementById("loader").style.display = "none";
+            document.getElementById("loader2").style.display = "none";
             document.getElementById("allset").style.display = "block";
         }
 
         function awaitpl() {
-            document.getElementById("loader").style.display = "none";
+            document.getElementById("loader2").style.display = "none";
             document.getElementById("awaiting").style.display = "block";
         }
     </script>
@@ -38,13 +38,18 @@
 </html>
 <div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPD></pre>
 <div id=CacheProgress><div id=CacheBar></div></div></div>
-<body onload="setTimeout(poc, 1500);">
+<body>
     <table style="width: 50%; margin-right: auto;">
         <tr style="list-style: none;">
             <th> <div class="dumb">
-            <p id="Ham">Exploit FW: 9.00</p><p id="Ham">Credits to: Chendochap, SpecterDev, Sleirsgoevy, AlAzif</p>
-        </div></th></table>
-    <div id="loader" class="loader"></div>
+            <p id="Ham">Exploit FW: 9.00</p><p id="Ham">Credits to: Chendochap, SpecterDev, Sleirsgoevy, AlAzif</p><p>Warning: Ignore Continues loading. Click the button to start</p>
+        </div></th></tr>
+        <tr>
+            <td> <div class="dumb">
+              <img src="Assets/images2.png" style="width: 20%; height: 20%;margin-left: 40%;margin-right: auto;"><br><p id="Ham">PS4 Exploit FW: 9.00</p><button  class="CGIT" style="font-size:20px;text-align:center;;text-shadow: 4px 4px 4px black;color:white" onclick="setTimeout(poc, 1500); return false">FW: 9.00</button>
+            </div></td></tr></table>
+
+            <div id="loader2" class="loader2"></div>
     <div id="awaiting" class="info" style="display:none;">
         Awaiting Payload...
         <br />

@@ -9,7 +9,6 @@ background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
-color: white;
 }
  button {
         border: 2px solid black;
@@ -503,4 +502,7 @@ table{
     margin: auto; 
     border-radius: 5px;
 
+}
+#ham{
+    color: white;
 }

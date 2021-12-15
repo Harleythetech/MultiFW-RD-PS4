@@ -18,6 +18,7 @@ the-payload.js
 Beans/app2usb.bin
 Beans/app-dumper.bin
 Beans/backupdb.bin
+Beans/disableaslr.bin
 Beans/disableupdates.bin
 Beans/enablebrowser.bin
 Beans/enableupdates.bin
@@ -31,10 +32,9 @@ Beans/permanentuart.bin
 Beans/restoredb.bin
 Beans/rifrenamer.bin
 Beans/ToDex.bin
-Beans/disableaslr.bin
-main.js
 jquery-3.6.0.js
-simple-notify-min.js
+main.js
+simple-notify.min.js
 
 NETWORK:
 

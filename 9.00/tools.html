@@ -18,6 +18,9 @@
             window.applicationCache.onerror=function(e){parent.cacheUPDtxt.innerHTML="Error Installing Cache";
         };
         </script>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="jquery-3.6.0.js"></script>
+        <script type="text/javascript" src="simple-notify-.min.js"></script>
 <script>
     function showdate() {
   var dt = new Date();
@@ -34,12 +37,12 @@ document.getElementById("clock").innerHTML = (Hour+":"+Minute);
   
   setInterval(showdate,0);
 </script>
-<body>
-<br>
+<body onload="go()">
+    <br>
     <span id="date" style="float:right; margin-right:.50%; margin-top: 0px; font-size:13px;" >
     </span>
     <span id="clock" style="float:right; margin-right:.0%; margin-top: 0px; font-size:13px;">
-</span>PS4 Firmware: 9.00 || Harleythetech MultiFW Host<br>
+    </span>PS4 Firmware: 9.00 || Harleythetech MultiFW Host<br>
         <div class="topnav">
             <a class="active" href="home.html">Home</a>
             <a class="idx" href="index.html">GoldHen 2.0  Autoload</a>
@@ -47,9 +50,139 @@ document.getElementById("clock").innerHTML = (Hour+":"+Minute);
           </div> 
         <div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPD></pre>
         <div id=CacheProgress><div id=CacheBar></div></div></div>
-        <h1 style="text-align: center; color: white;">⚠️//-Under Construction-\\⚠️</h1>
-</body>
-    <footer style="position: fixed; bottom: 12px; left: 5px; width: 5px; padding: 3px; background-color: DarkSalmon; color: white;">
-        <p style='position: fixed; bottom: 0px; left: 20px;'><a style='font-size:13px;text-align:center;color:#0083cf;'>Designer: <a class="hue" style='font-size:13px;text-align:center;color:white;text-shadow: 4px 4px 4px black;'>Harley Jovellano - @harleythetech<a style='font-size:13px;text-align:center;color:#0083cf;'></a><br></p><br>
-    </footer>
-</html>
+    <h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Status</h1><br>
+    <div class="SelectF"><input type="text" placeholder="PS4 IP Here" id="psip"></div>
+    <div style="text-align:center"  id="MyItems"><br>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='A full access FTP server for the PS4'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_FTP()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > FTP </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='Move installed games to an external USB drive'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_App2USB()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > App2USB </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='unlocks some debug features available on testkit'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_TODEX()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > ToDex </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='Disable IDU Mode'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_ExitIDU()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Exit IDU </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='disable aslr'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_DisableASLR()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Disable Aslr </button></a>
+    <br><br>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='Enable Browser'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_EnableBrowser()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Enable Browser </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='Disable the auto opening of the last page used in the PS4 WebBrowser'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_HistoryBlocker()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > History Blocker </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='Creates dummy files in the PS4 update folder'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_DisableUpdates()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' >Disable Updates</button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='Removes the dummy files in the PS4 update folder'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_EnableUpdates()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Enable Update </button></a>
+    <br><br>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='Dump Games to a USB drive to be able to create fpkg files'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_AppDumper()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Dumper Game </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='kernel dumper'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_KernelDumper()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Kernel Dumper </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='module dumper'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_ModuleDumper()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Module Dumper </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='Create a backup of important database files ans User Data'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_BackupDB()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > DB Backup </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='Restore a backup of the database files and User Data'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_RestoreDB()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > DB Restore </button></a>
+    <br><br>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='Rif Renamer'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_RIFRenamer()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Rif renamer </button></a>
+    <a style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="button" id="button-Payload" onMouseOver="progress.innerHTML='permanentuart'"; onmouseout="progress.innerHTML='Status'" type="button" onclick="load_permanentuart()"><button href="" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > permanent uart </button></a>
+    <br></div>
+    <script>
+    
+    function load_PS4Debug(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/ps4debug.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_permanentuart(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/permanentuart.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_App2USB(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/app2usb.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_BackupDB(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/backupdb.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_AppDumper(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/appdumper.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_KernelDumper(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/kerneldumper.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_ModuleDumper(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/mdumper.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_RestoreDB(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/restoredb.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_DisableASLR(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/disableaslr.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_DisableUpdates(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/disableupdates.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_EnableUpdates(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/enbaleupdates.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_EnableBrowser(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/enbalebrowser.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_ExitIDU(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/exitidu.bin";
+        LoadviaGoldhen(PLfile);
+    }
+      
+    function load_FTP(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/ftp.bin";
+        LoadviaGoldhen(PLfile);
+    }
+      
+    function load_HistoryBlocker(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/historyblocker.bin";
+        LoadviaGoldhen(PLfile);
+    }
+      
+    function load_RIFRenamer(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/rifrenamer.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    function load_ToDex(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/ToDex.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    
+    function load_WebRTE(){
+        progress.innerHTML="Payload sending... please wait";
+        PLfile = "Beans/WebRTE.bin";
+        LoadviaGoldhen(PLfile);
+    }
+    </script>	 
+    </div>
+    </body>
+    
+    </html>

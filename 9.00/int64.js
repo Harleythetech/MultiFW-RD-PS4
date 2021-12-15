@@ -1,6 +1,6 @@
 // Taken from https://github.com/saelo/jscpwn/blob/master/int64.js
 //
-// Copyright (c) 2016 Samuel GroÃŸ
+// Copyright (c) 2016 Samuel Groß
 function int64(low, hi) {
     this.low = (low >>> 0);
     this.hi = (hi >>> 0);

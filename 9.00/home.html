@@ -1,0 +1,63 @@
+<html manifest="offlinexmb.cache">
+    <head>
+        <title>FW: 9.00 | Harleythetech MultiFW Host</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
+        <link rel="stylesheet prefetch" href="Style.css">
+        <script>function DLProgress(e){
+            parent.ScrOverlay.style.display="block";
+            Percent=(Math.round(e.loaded / e.total * 100));
+            parent.cacheUPDtxt.innerHTML="Installing Offline Cache: " + Percent + "%";
+            parent.CacheBar.style.width=Percent + '%';
+        }
+        function DisplayCacheProgress(){
+            setTimeout(function(){parent.cacheUPDtxt.innerHTML="Cache Installed Successfully.Restart the PS4 & Reopen the Browser!!";},1000);}
+            window.applicationCache.addEventListener("progress",DLProgress,false);
+            window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+            window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+            window.applicationCache.onerror=function(e){parent.cacheUPDtxt.innerHTML="Error Installing Cache";
+        };
+        </script>
+<script>
+    function showdate() {
+  var dt = new Date();
+    Hour= dt.getHours();
+  Minute= dt.getMinutes();
+     Day=dt.getDate();
+   Month=dt.getMonth()+1;
+   Year=dt.getFullYear();
+if (Minute < 10) { Minute = "0" + Minute; };
+if (Hour < 10) { Hour = "0" + Hour; };
+document.getElementById("date").innerHTML = (Day+"/"+Month+"/"+Year);
+document.getElementById("clock").innerHTML = (Hour+":"+Minute);
+  }
+  
+  setInterval(showdate,0);
+</script>
+<body>
+<br>
+    <span id="date" style="float:right; margin-right:.50%; margin-top: 0px; font-size:13px;" >
+    </span>
+    <span id="clock" style="float:right; margin-right:.0%; margin-top: 0px; font-size:13px;">
+</span>PS4 Firmware: 9.00 || Harleythetech MultiFW Host<br>
+        <div class="topnav">
+            <a class="active" href="home.html">Home</a>
+            <a class="idx" href="index.html">GoldHen 2.0  Autoload</a>
+            <a class="idx" href="tools.html">Tools</a>
+          </div> 
+        <div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPD></pre>
+        <div id=CacheProgress><div id=CacheBar></div></div></div>
+        <h2 id=mesg3 style='font-size: 20px; text-align: left; color: antiquewhite;'>Host Update</h2>
+        <ul class="HUFE">
+          <li>Coming Soon: Tools (Under Construction)</li>
+          <li>Host Added: PS4 Exploit + GoldHen 2.0b AutoLoad </li>
+          <li>Host Added: Tabs ( Home, GoldHen2.0, Tools)</li>
+          <li>Host Creation: December 14, 2021</li>
+          </ul>
+        <br>
+        <br>
+    </body>
+    <footer style="position: fixed; bottom: 12px; left: 5px; width: 5px; padding: 3px; background-color: DarkSalmon; color: white;">
+        <p style='position: fixed; bottom: 0px; left: 20px;'><a style='font-size:13px;text-align:center;color:#0083cf;'>Designer: <a class="hue" style='font-size:13px;text-align:center;color:white;text-shadow: 4px 4px 4px black;'>Harley Jovellano - @harleythetech<a style='font-size:13px;text-align:center;color:#0083cf;'></a><br></p><br>
+    </footer>
+</html>

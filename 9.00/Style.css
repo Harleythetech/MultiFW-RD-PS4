@@ -9,6 +9,7 @@ background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
+color: white;
 }
  button {
         border: 2px solid black;
@@ -41,14 +42,14 @@ header{
  margin-right:2.25%;
  margin-top: 0px;
  font-size:1px;
-  color: rgb(153, 152, 152);
+  color: rgb(255, 255, 255);
 }
 #date {
  float:left;
  margin-left:1.25%;
  margin-top: 5px;
  font-size:1px;
- color: white;
+ color: rgb(255, 255, 255);
 }
 .msgs {
 position:absolute; left:0; right:0; top:0; bottom:0; margin:auto; max-width:100%; max-height:100%;
@@ -129,7 +130,7 @@ margin:0;
 opacity:0.7;
 }
 
-#loader{
+#loader2{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -506,3 +507,40 @@ table{
 #ham{
     color: white;
 }
+.a {
+    cursor: pointer;
+  }
+  /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: rgb(27, 57, 82);
+    color: white;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(36, 36, 36);
+    color: rgb(146, 146, 146);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #045aaa;
+    color: white;
+  }
+  ul.HUFE{
+    color: antiquewhite; 
+    text-align: left; 
+    font-size: 20px;
+  
+  }

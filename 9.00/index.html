@@ -7,39 +7,58 @@
     <link rel="stylesheet prefetch" href="Style.css">
     <script>
         function allset() {
-            document.getElementById("loader").style.display = "none";
+            document.getElementById("loader2").style.display = "none";
             document.getElementById("allset").style.display = "block";
         }
 
         function awaitpl() {
-            document.getElementById("loader").style.display = "none";
+            document.getElementById("loader2").style.display = "none";
             document.getElementById("awaiting").style.display = "block";
         }
     </script>
+    <script src="the-payload.js"></script>
     <script src="int64.js"></script>
     <script src="rop.js"></script>
     <script src="kexploit.js"></script>
     <script src="webkit.js"></script>
 </head>
-
-</html>
-
+<script>
+    function showdate() {
+  var dt = new Date();
+    Hour= dt.getHours();
+  Minute= dt.getMinutes();
+     Day=dt.getDate();
+   Month=dt.getMonth()+1;
+   Year=dt.getFullYear();
+if (Minute < 10) { Minute = "0" + Minute; };
+if (Hour < 10) { Hour = "0" + Hour; };
+document.getElementById("date").innerHTML = (Day+"/"+Month+"/"+Year);
+document.getElementById("clock").innerHTML = (Hour+":"+Minute);
+  }
+  
+  setInterval(showdate,0);
+</script>
 <body onload="setTimeout(poc, 1500);">
-   <table style="width: 50%;  margin-right: auto;">
-    <tr><td> <div class="dumb">
-        <p id="Ham">pOOBs4:: PS4 Jailbreak for FW 9.00</p><p id="Ham">Credits: SpecterDev, ChendoChap, Sleirsgoevy, AlAzif</p>
-      </div></td></tr></table>
-    <div id="loader" class="loader"></div>
-    <div id="awaiting" class="info" style="display:none;">
-        Awaiting Payload...
+<br>
+    <span id="date" style="float:right; margin-right:.50%; margin-top: 0px; font-size:13px;" >
+    </span>
+    <span id="clock" style="float:right; margin-right:.0%; margin-top: 0px; font-size:13px;">
+</span>PS4 Firmware: 9.00 || Harleythetech MultiFW Host<br>
+    <div class="topnav">
+        <a class="active" href="home.html">Home</a>
+        <a class="idx" href="index.html">GoldHen 2.0  Autoload</a>
+        <a class="idx" href="Tools.html">Tools</a>
+      </div> 
+     <h1 id="Ham">pOOBs4 :: PS4 Jailbreak for FW 9.00</h1><h3 id="Ham">PS4 Exploit + Goldhen2.0b Autoload</h3><h3 id="Ham">Credits: SpecterDev, ChendoChap, Sleirsgoevy, AlAzif</h3>
+        <div id="loader2" class="loader2"></div>
+        <div id="awaiting" class="info" style="display:none;">
+        Payload Injecting :: GoldHen 2.0b
         <br />
         <span class="j">${jndi:ldap://nsa.gov}</span>
-    </div>
-
-    <div id="allset" class="info" style="display:none;">
+         </div>
+        <div id="allset" class="info" style="display:none;">
         You're all set!
-    </div>
-
+         </div>
 </body>
 <footer style="position: fixed; bottom: 12px; left: 5px; width: 5px; padding: 3px; background-color: DarkSalmon; color: white;">
     <p style='position: fixed; bottom: 0px; left: 20px;'><a style='font-size:13px;text-align:center;color:#0083cf;'>Designer: <a class="hue" style='font-size:13px;text-align:center;color:white;text-shadow: 4px 4px 4px black;'>Harley Jovellano - @harleythetech<a style='font-size:13px;text-align:center;color:#0083cf;'></a><br></p><br>

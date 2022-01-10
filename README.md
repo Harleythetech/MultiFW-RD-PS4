@@ -9,3 +9,7 @@ A Newer Version of the Previous 6.72 Exploit But with More Firmware Support!
 // ハーレイ#3380
 
 This site is based on Karo218.ir with the UI Modified.
+
+//Photo Sample
+![image](https://user-images.githubusercontent.com/51787264/148763556-67dca9f3-ed2b-4ccd-b309-23c97fb133d1.png)
+

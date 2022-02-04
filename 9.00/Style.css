@@ -1,55 +1,63 @@
-html, body{
-margin:auto;
-font-family:UD Digi Kyokasho NK-B!important;
-font-size:13px;
-font-weight:lighter;
-text-align:left;
-background-image: url("Assets/aa.png");
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-color: white;
-}
- button {
-        border: 2px solid black;
-        border-radius: 5px;
-        width: 395px;
-        height: 40px;           
-        text-align: center;
-        padding: 1px;
-        margin: 1px;
-        color: white;
-        background:rgba(0,0,0,0.5);
-}
+@import url('Assets/ReadexPro.ttf');
 
-button:hover {
-            box-shadow: 0 1px 10px 0 white;
-            color: white;
-            border-radius: 5px;
-            background-color: #008c9e;
+body{
+    background-image: url('Assets/a.jpg');
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.shite, li, a, button{
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
 }
 header{
-	height: 3em;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 10;
+    background-color: rgba(44, 44, 44, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
 }
-#clock{
- float:right;
- margin-right:2.25%;
- margin-top: 0px;
- font-size:1px;
-  color: rgb(255, 255, 255);
+.shite{
+    cursor: pointer;
 }
-#date {
- float:left;
- margin-left:1.25%;
- margin-top: 5px;
- font-size:1px;
- color: rgb(255, 255, 255);
+.nav_bar{
+list-style: none;
+}
+.nav_bar li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_bar li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_bar li a:hover{
+    color: royalblue;
+}
+button{
+    padding: 9px 25px;
+    background-color: rgba(46, 167, 250, 0.8);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: rgba(64, 64, 64, 1);
+}
+.shite:hover{
+    color: rgba(46, 167, 250, 0.8);
+}
+#msgs2{
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
 }
 .msgs {
 position:absolute; left:0; right:0; top:0; bottom:0; margin:auto; max-width:100%; max-height:100%;
@@ -427,28 +435,34 @@ line-height:30px;align-items:left;
 font-family:sans-serif;font-size:32px;text-shadow: 4px 4px 4px black;text-align:center;color:white;z-index:901;
 }
 #clock{
- float:right;
- margin-right:2.25%;
- margin-top: 18px;
- font-weight:bold;
- font-size:28px;
-  color: white;
+    float:right; 
+    margin-right:.30%; 
+    margin-top: 0px;
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
 }
 #date {
- float:left;
+ float:right;
  margin-left:1.25%;
- font-weight:bold;
- margin-top: 18px;
- font-size:28px;
+ margin-top: 0px;
  color: white;
+ font-family: 'Readex Pro', sans-serif;
+ font-weight: 300;
+ font-size: 25px;
+text-decoration: none;
 }
 #donate2{
- float:right;
- margin-right:2.25%;
- margin-top: 11px;
- font-weight:bold;
- font-size:28px;
-  color: white;
+float:right;
+margin-right:2.25%;
+margin-top: 11px;
+color: white;
+font-family: 'Readex Pro', sans-serif;
+font-weight: 300;
+font-size: 20px;
+text-decoration: none;
 }
 #donate {
  float:left;
@@ -457,12 +471,6 @@ font-family:sans-serif;font-size:32px;text-shadow: 4px 4px 4px black;text-align:
  margin-top: 11px;
  font-size:28px;
  color: white;
-}
-#msgs2 {
- font-weight:bold;
- text-shadow: 4px 4px 4px black;
-
- font-size:17px;
 }
 .pointer {cursor: pointer;}
 
@@ -505,7 +513,11 @@ table{
 
 }
 #ham{
-    color: white;
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
 }
 .a {
     cursor: pointer;
@@ -543,4 +555,36 @@ table{
     text-align: left; 
     font-size: 20px;
   
+  }
+  .CFB{
+    width: 378px;
+    height: 40px; 
+    padding: 9px 25px;
+    background-color: rgba(46, 167, 250, 0.8);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .CIG{
+    width: 378px;
+    height: 40px; 
+    padding: 9px 25px;
+    background-color: rgba(46, 167, 250, 0.8);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .CFB:hover{
+    box-shadow: 0 1px 10px 0 white;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(64, 64, 64, 1);
+  }
+  .CIG:hover{
+    box-shadow: 0 1px 10px 0 white;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(64, 64, 64, 1);
   }

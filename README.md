@@ -14,5 +14,11 @@ A Newer Version of the Previous 6.72 Exploit But with More Firmware Support!
 This site is based on Karo218.ir with the UI Modified.
 
 //Photo Sample
+
+[OLD UI]
 ![image](https://user-images.githubusercontent.com/51787264/148763556-67dca9f3-ed2b-4ccd-b309-23c97fb133d1.png)
+
+[NEW UI]
+![image](https://user-images.githubusercontent.com/51787264/152507452-18966dbc-df53-4373-a44e-557f924fb7fc.png)
+
 
